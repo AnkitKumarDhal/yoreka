@@ -1,0 +1,296 @@
+{
+    "bluetooth": {
+        "format": "<span text-transform='capitalize'> {status}</span>",
+        "format-disabled": "",
+        "format-connected": "<span font-family='Font Awesome 6 Pro'></span> {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{device_battery_percentage}% Battery Left",
+        "on-click": "~/.config/waybar/scripts/blue.sh"
+    },
+
+    "hyprland/window": {
+        "format": "󰣇 {initialTitle}",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/theme.rasi"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "α",
+            "2": "β",
+            "3": "γ",
+            "4": "δ",
+            "5": "ε",
+            "6": "ζ",
+            "7": "ω",
+            "8": "θ",
+            "9": "ι",
+            "10": "ψ"
+        }
+    },
+
+    "hyprland/workspaces#dotted": {
+        "active-only": false,
+        "all-outputs": true, 
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "hyprland/workspaces#roman": {
+        "active-only":false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
+    },
+
+    "hyprland/workspaces#kanji": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": " {icon} ",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    },
+
+    "hyprland/workspaces#pacman": {
+        "active-only":false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "show-special": false,
+        "format": "{icon}",
+        "format-icons": {
+            "active": " 󰮯 ",
+            "default": "󰊠",
+            "persistent":"󰊠"
+        }
+    },
+
+    "custom/separator#dot-line": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "<span font-family='Font Awesome 6 Pro'> </span>{:%I:%M %p}",
+        "format-alt": "{:%A —  %d %b, %Y}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#a6adc8'><b>{}</b></span>",
+                "weekdays": "<span color='#a6adc8'><b>{}</b></span>",
+                "today": "<span color='#a6adc8'><b>{}</b></span>",
+                "days": "<span color='#555869'><b>{}</b></span>"
+            }
+        }
+    },
+
+    "tray": {
+        "icon-size": 13,
+        "spacing": 10
+    },
+
+    "mpris": {
+        "format": "  {title}",
+        "format-paused": "<span font-family='Font Awesome 6 Pro'>󰏤 </span><i>{title}</i>",
+        "max-length": 30,
+        "player-icons": {
+            "default": "󰝚"
+        },
+        "status-icons": {
+            "paused": "󰏤"
+        },
+        "on-scroll-down": "playerctl volume 0.05+",
+        "on-scroll-up": "playerctl volume 0.05-"
+    },
+
+    "custom/music": {
+        "format": "<span font-family='Font Awesome 6 Pro'>  </span>{}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click-middle": "kitty --override font_size=9.0 -o adjust_line_height=0 -o adjust_column_width=80% --class fum -e fum --use-active-player true -c ~/.config/fum/fum-config.jsonc",
+        "on-click-right": "playerctl play-pause",
+        "on-click-backward": "playerctl previous",
+        "on-click-forward": "playerctl next",
+        "on-scroll-up": "playerctl volume 0.05+",
+        "on-scroll-down": "playerctl volume 0.05-",
+        "max-length": 20
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-alt": "{icon}{percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set 1%-",
+        "on-scroll-down": "brightnessctl set 1%+"
+        // "min-length": 6
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon}",
+        "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": " ",
+            "power-saver": " "
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "tooltip": false,
+        "format-muted": "  Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -d 1",
+        "on-scroll-down": "pamixer -i 1",
+        "on-click-right": "pavucontrol-qt --tab=3",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["","", "", ""]
+        }
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": " <span foreground='red'><sup> </sup></span>",
+            "dnd-none": " ",
+            "inhibited-notification": "<span foreground='red' <sup> </sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": " <span foreground='red'><sup> </sup></span>",
+            "dnd-inhibited-none": " "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+    "memory": {
+        // "states": {
+        //     "c": 90, // critical
+        //     "h": 60, // high
+        //     "m": 30 // medium
+        // },
+        "interval": 1,
+        "format-alt": "󰾆 {used}GB",
+        // "format-m": "󰾅 {used}GB",
+        // "format-h": "󰓅 {used}GB",
+        // "format-c": " {used}GB",
+        "format": "󰾆 {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+    },
+
+    "cpu": {
+        "interval": 1,
+        "on-click": "~/.config/waybar/scripts/btop_check.sh",
+        "format": "<span font-family='Font Awesome 6 Pro'> </span>{usage}%"
+    },
+
+    "network": {
+        "tooltip": true,
+        "format-wifi": "<span font-family='Font Awesome 6 Pro'>  </span>{essid}",
+        "format-ethernet": "󰈀 {bandwidthTotalBytes}",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "interval": 1
+    },
+
+    "custom/power": {
+        "format" : "",
+        "on-click": "wlogout"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    }
+}

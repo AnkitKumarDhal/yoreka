@@ -1,0 +1,153 @@
+@import "/home/mizx/.cache/wal/colors-waybar.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Pro";
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #a6e;
+}
+
+#window {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#clock {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+  font-weight: 800;
+}
+
+#custom-music {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+  font-weight: 800;
+}
+
+#mpris {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+  font-weight: 800;
+}
+#workspaces {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 0px 5px;
+  margin: 3px 0px 0px 10px;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #555869;
+  margin-right: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+  color: @foreground;
+}
+
+#workspaces button.focused {
+  color: @foreground;
+  background: #90dc89;
+  border-radius: 80px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: @foreground;
+  border-radius: 80px;
+}
+
+#workspaces button:hover {
+  background: #90dc89;
+  color: #11111b;
+  border-radius: 80px;
+  padding: 0px 5px 0px 5px;
+  margin: 5px 2.5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#cpu {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#memory {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#network {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#bluetooth {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#pulseaudio {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#tray {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 0px 0px 10px;
+}
+
+#custom-notification {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 10px 0px 10px;
+}
+
+#custom-power {
+  background: #1e1e2e;
+  color: @foreground;
+  border-radius: 80px;
+  padding: 3px 10px;
+  margin: 3px 10px 0px 0px;
+}

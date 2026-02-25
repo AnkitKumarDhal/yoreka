@@ -1,0 +1,26 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer-shell": true,
+  "cssPriority": "user",
+  "control-center-width": 380,
+  "control-center-height": 700,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 10,
+  "fit-to-screen": false,
+  "namespace": "swaync-control-center",
+  "widgets": [
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": " 󰎟 "
+    }
+  }
+}

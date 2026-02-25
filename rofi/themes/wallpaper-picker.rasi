@@ -1,0 +1,47 @@
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+@theme "~/.cache/wal/rofi-minimal.rasi"
+
+window {
+    width: 800px;
+    height: 600px;
+    border: 2px solid;
+    background-color: @background;
+    border-radius: 12px;
+}
+
+listview {
+    columns: 3;
+    lines: 3;
+    spacing: 20px;
+    padding: 20px;
+    fixed-columns: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+element selected {
+    background-color: @selected;
+    color: @background;
+}
+
+element-icon {
+    size: 150px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "JetBrains Mono Nerd Font 10";
+}

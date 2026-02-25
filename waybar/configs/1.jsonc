@@ -1,0 +1,36 @@
+{
+    "include": "~/.config/waybar/modules.jsonc",
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "hyprland/window",
+        "clock",
+        "cpu",
+        "custom/separator#dot-line",
+        "memory"
+    ],
+    "modules-center": [
+        "power-profiles-daemon",
+        "hyprland/workspaces#kanji",
+        "mpris",
+        // "custom/music",
+        "idle_inhibitor"
+    ],
+    "modules-right": [
+        "network",
+        "custom/separator#dot-line",
+        "bluetooth",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "tray",
+        "custom/notification"
+        // "custom/power"
+    ]
+}
