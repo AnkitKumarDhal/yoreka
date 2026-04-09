@@ -4,6 +4,7 @@ local options = {
         css = { "prettier" },
         html = { "prettier" },
         python = { "black" },
+        qml = { "qmlformat" },
     },
 
     format_on_save = {
