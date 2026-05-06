@@ -5,6 +5,10 @@ opt.shiftwidth = 4 -- number of spaces for each step of (auto)indent
 opt.tabstop = 4 -- number of spaces that a <Tab> counts for while editing
 opt.expandtab = true -- use spaces instead of tabs
 opt.relativenumber = true -- show relative line numbers
-opt.mouse = 'a'
+opt.mouse = "a"
 local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
+o.cursorlineopt = "both" -- to enable cursorline!
+
+vim.filetype.add {
+    extension = { qml = "qml" },
+}

@@ -1,0 +1,75 @@
+{
+  "Item": {
+    "prefix": "item",
+    "body": [
+      "Item {",
+      "\tid: ${1:itemId}",
+      "\twidth: ${2:100}",
+      "\theight: ${3:100}",
+      "",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standard QML Item"
+  },
+  "Rectangle": {
+    "prefix": "rect",
+    "body": [
+      "Rectangle {",
+      "\tid: ${1:rectId}",
+      "\twidth: ${2:100}",
+      "\theight: ${3:100}",
+      "\tcolor: \"${4:transparent}\"",
+      "",
+      "\t$0",
+      "}"
+    ],
+    "description": "QML Rectangle"
+  },
+  "PanelWindow (Quickshell)": {
+    "prefix": "panel",
+    "body": [
+      "PanelWindow {",
+      "\tid: ${1:windowId}",
+      "\tanchors {",
+      "\t\t${2:top: true}",
+      "\t\t${3:bottom: false}",
+      "\t}",
+      "\twidth: ${4:1920}",
+      "\theight: ${5:30}",
+      "\tcolor: \"${6:transparent}\"",
+      "",
+      "\t$0",
+      "}"
+    ],
+    "description": "Quickshell PanelWindow"
+  },
+  "Custom Property": {
+    "prefix": "prop",
+    "body": [
+      "property ${1|int,string,bool,real,var,Item|} ${2:name}: ${3:value}"
+    ],
+    "description": "Define a custom property"
+  },
+  "Component.onCompleted": {
+    "prefix": "oncomp",
+    "body": [
+      "Component.onCompleted: {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Component onCompleted block"
+  },
+  "Connections": {
+    "prefix": "conn",
+    "body": [
+      "Connections {",
+      "\ttarget: ${1:targetObject}",
+      "\tfunction on${2:SignalName}() {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Signal connections block"
+  }
+}
